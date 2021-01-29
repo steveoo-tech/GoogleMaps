@@ -14,4 +14,14 @@ class student{
         return `${_first_name} ${_last_name}`;
     }
     
-}
+};
+
+class internship {
+
+    private _businessName:string="";
+    private _location:object  ={
+        lat:0,
+        lan:0,
+    };
+
+};
