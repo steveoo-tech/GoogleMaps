@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "start": "ts-node-dev ./src/index.ts",
     "url": "git+https://github.com/RTeeen/GoogleMaps.git"
   },
   "author": "Artin, Ryan, Steve, Alex",
