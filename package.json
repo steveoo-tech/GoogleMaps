@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "parcel": "parcel ./index.html",
     "start": "ts-node-dev ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "start": "ts-node-dev ./src/index.ts",
     "url": "git+https://github.com/RTeeen/GoogleMaps.git"
   },
-  "author": "Artin, Ryan, Steve",
+  "author": "Artin, Ryan, Steve, Alex",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RTeeen/GoogleMaps/issues"
