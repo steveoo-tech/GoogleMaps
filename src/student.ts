@@ -1,4 +1,5 @@
 import faker from "faker";
+
 export class Students {
     private location = {}; 
     private lastName: string = '';
@@ -8,17 +9,16 @@ export class Students {
         this.firstName = faker.name.firstName()
         this.lastName = faker.name.lastName()
         this.location = {
-            latitude: parseFloat(faker.address.latitude()),
-            longitude: parseFloat(faker.address.longitude())
+            lat: parseFloat(faker.address.latitude()),
+            lng: parseFloat(faker.address.longitude())
         }
     }
-    getlocation() {
+    getLocation() {
         return this.location;
     }
-    getLastName() {
-        return this.lastName;
+    getStudentName() {
+        return this.firstName + this.lastName;
     }
-    getFirstName() {
-        return this.firstName;
-    }
+    
+    
 }

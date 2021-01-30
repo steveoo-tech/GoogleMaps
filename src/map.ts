@@ -4,37 +4,44 @@ const myLatlng = { lat: 49.1913, lng: -122.8490 };
 
 export class Map {
   
-  private markerArray: any = []; 
-  private marker = google.maps.Marker.prototype;
-  private _googleMap: google.maps.Map;
-  constructor() {
-    this._googleMap = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-      center: myLatlng,
-      zoom: 10,
-    });
-  }
-  
-  addMarker(position: {lat: number, lng: number}) {
-    this.marker = new google.maps.Marker({
-      map: this._googleMap,
-      position: {
-        lat: position.lat,
-        lng: position.lng
-      },
-    });
-    this.marker.setMap(this._googleMap)
-    this.markerArray.push(this.marker)
-  }
+    private markerArray: any = []; 
+    private marker = google.maps.Marker.prototype;
+    private _googleMap: google.maps.Map;
+    constructor() {
+      this._googleMap = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+        center: myLatlng,
+        zoom: 10,
+      });
+    }
+    addStudent(lat: number, lng: number, name: string): void {
+      this.addMarker(lat, lng);
+      return;
+    }
+    addIntern(lat: number, lng: number, name: string): void {
+      this.addMarker(lat, lng);
+      return;
+    }
+    addMarker(lat: number, lng: number) {
+      this.marker = new google.maps.Marker({
+        map: this._googleMap,
+        position: {
+          lat: lat,
+          lng: lng
+        },
+      });
+      this.marker.setMap(this._googleMap)
+      this.markerArray.push(this.marker)
+    }
 
-  getMap() {
-    return this._googleMap;
-  }
-  getMarker() {
-    return this.marker;
-  }
-  getMarkerArray() {
-    return this.markerArray;
-  }
+    getMap() {
+      return this._googleMap;
+    }
+    getMarker() {
+      return this.marker;
+    }
+    getMarkerArray() {
+      return this.markerArray;
+    }
 
 
 

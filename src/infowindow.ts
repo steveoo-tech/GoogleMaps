@@ -7,7 +7,7 @@ export class InfoWindow {
 
   private infoWindow = google.maps.InfoWindow.prototype;
 
-  listen() {
+  listen(name: string) {
 
     let m = map.getMarkerArray()
     m.forEach((m: any) => {
@@ -16,8 +16,7 @@ export class InfoWindow {
           position: mapsMouseEvent.latLng,
         })
         console.log("listening in info window")
-        let studentName = (student.getFirstName() + ' ' + student.getLastName())
-        this.infoWindow.setContent(studentName);
+        
         this.infoWindow.open(map.getMap())
       })
     });

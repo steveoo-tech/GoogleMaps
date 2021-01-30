@@ -1,4 +1,5 @@
-import faker from "faker";
+import faker from "faker"
+
 export class Internship {
     location = {}; 
     internName: string = '';
@@ -10,4 +11,11 @@ export class Internship {
             longitude: parseFloat(faker.address.longitude())
         }
     }
+    getLocation() {
+        return this.location;
+    }
+    getInternName() {
+        return this.internName;
+    }
+    
 }
