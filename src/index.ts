@@ -22,8 +22,8 @@ map.addIntern(internLocation.lat, internLocation.lng, internship.getInternName()
     
 
 console.log("We made it to here");
-=======
-console.log("Artinnnn");
+
+console.log("Steve");
 
 import {student} from './student';
 import {internship} from './intership';

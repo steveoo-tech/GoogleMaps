@@ -23,8 +23,7 @@ export class Students {
     
     
 }
-=======
-import faker from 'faker';
+
 
 
 class student{
